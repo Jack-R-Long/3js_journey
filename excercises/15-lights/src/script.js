@@ -45,7 +45,7 @@ scene.add(rectAreaLight)
 
 const spotLight = new THREE.SpotLight('green', 3, 6, Math.PI * 0.2, 0.25, 1)
 spotLight.position.set(0, 2, 3)
-scene.add(spotLight)
+scene.add(spotLight)~
 
 spotLight.target.position.x = -0.75
 scene.add(spotLight.target)
@@ -73,7 +73,7 @@ scene.add(rectAreaLightHelper)
 /**
  * Objects
  */
-// Material
+// Material~
 const material = new THREE.MeshStandardMaterial()
 material.roughness = 0.4
 
@@ -83,6 +83,7 @@ const sphere = new THREE.Mesh(
     material
 )
 sphere.position.x = - 1.5
+sphere.castShadow = true
 
 const cube = new THREE.Mesh(
     new THREE.BoxGeometry(0.75, 0.75, 0.75),
@@ -149,6 +150,7 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+renderer.shadowMap.enabled = true
 
 /**
  * Animate
