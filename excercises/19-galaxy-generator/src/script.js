@@ -134,7 +134,7 @@ gui
 gui
   .add(parameters, "randomnessPower")
   .min(1)
-  .max(3)
+  .max(6)
   .step(.01)
   .onFinishChange(generateGalaxy);
 gui.addColor(parameters, "insideColor").onFinishChange(generateGalaxy);
