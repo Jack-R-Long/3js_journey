@@ -17,7 +17,7 @@ function onPointerMove(event) {
 
 function onClick(event) {
     if (currentIntersect) {
-        console.log("clicked on", currentIntersect.object);
+        console.log("clicked on", currentIntersect.object.name);
     }
 }
 
@@ -41,17 +41,20 @@ const object1 = new THREE.Mesh(
   new THREE.MeshBasicMaterial({ color: "#ff0000" })
 );
 object1.position.x = -2;
+object1.name = 'object1';
 
 const object2 = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
   new THREE.MeshBasicMaterial({ color: "#ff0000" })
 );
+object2.name = 'object2';
 
 const object3 = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
   new THREE.MeshBasicMaterial({ color: "#ff0000" })
 );
 object3.position.x = 2;
+object3.name = 'object3';
 
 scene.add(object1, object2, object3);
 
